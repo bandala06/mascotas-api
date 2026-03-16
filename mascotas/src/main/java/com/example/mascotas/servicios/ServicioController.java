@@ -38,7 +38,6 @@ public class ServicioController {
                 .map(servicioExistente -> {
                     // Actualizamos las descripciones y el precio
                     servicioExistente.setDescripcion(servicioActualizado.getDescripcion());
-                    servicioExistente.setDescripcion2(servicioActualizado.getDescripcion2());
                     servicioExistente.setPrecio(servicioActualizado.getPrecio());
 
                     return ResponseEntity.ok(servicioRepository.save(servicioExistente));
