@@ -3,6 +3,7 @@ package com.example.mascotas.mascotas;
 
 import com.example.mascotas.clientes.Cliente;
 import com.example.mascotas.mascotasServicios.MascotaServicio;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -38,5 +39,6 @@ public class Mascota {
     private Cliente cliente;
 
     @OneToMany(mappedBy = "mascota")
+    @JsonIgnore
     private List<MascotaServicio> mascotaServicio;
 }

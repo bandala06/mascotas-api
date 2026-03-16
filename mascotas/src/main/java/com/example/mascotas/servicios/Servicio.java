@@ -1,6 +1,7 @@
 package com.example.mascotas.servicios;
 
 import com.example.mascotas.mascotasServicios.MascotaServicio;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,6 +28,7 @@ public class Servicio {
     private float precio;
 
     @OneToMany(mappedBy = "servicio")
+    @JsonIgnore
     private List<MascotaServicio> mascotaServicios;
 
 
