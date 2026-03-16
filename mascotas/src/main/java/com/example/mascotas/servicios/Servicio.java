@@ -23,8 +23,6 @@ public class Servicio {
     private Long idServicio;
     @Column(nullable = false, length = 150)
     private String descripcion;
-    @Column(nullable = false, length=150)
-    private String descripcion2;
     @Column(scale = 2)
     private float precio;
 
