@@ -16,8 +16,8 @@ public class CorsConfig {
                 registry.addMapping("/**") // Permite todas las rutas de tu API (/cliente, /mascota, etc.)
                         .allowedOrigins(
                                 "http://localhost:5173", // Puerto por defecto si usas Vite para React
-                                "http://localhost:3000"  // Puerto por defecto si usas Create React App
-                                // Nota: Aquí agregaremos tu URL de Netlify más adelante
+                                "http://localhost:3000",  // Puerto por defecto si usas Create React App
+                                "https://frontend-mascotas.netlify.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
